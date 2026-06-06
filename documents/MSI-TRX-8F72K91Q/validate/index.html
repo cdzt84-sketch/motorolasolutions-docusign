@@ -3,7 +3,9 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Document Validation | Motorola Solutions</title>
+<title>Docusign-Motorola</title>
+
+<link rel="icon" type="image/svg+xml" href="https://docucdn-a.akamaihd.net/olive/images/2.72.0/global-assets/ds-logo-default.svg">
 
 <style>
 body{
@@ -20,6 +22,13 @@ body{
     font-size:13px;
     display:flex;
     justify-content:space-between;
+    align-items:center;
+}
+
+.topbar a{
+    color:white;
+    text-decoration:none;
+    font-weight:bold;
 }
 
 .header{
@@ -31,13 +40,16 @@ body{
     border-bottom:1px solid #e5e5e5;
 }
 
-.logo{
-    font-size:26px;
-    font-weight:bold;
+.logo img{
+    height:48px;
+    width:auto;
+    display:block;
 }
 
-.logo span{
-    color:#4b00ff;
+.document-id{
+    font-size:14px;
+    color:#170033;
+    font-weight:600;
 }
 
 .container{
@@ -138,6 +150,16 @@ body{
         padding:18px;
     }
 
+    .header{
+        flex-direction:column;
+        align-items:flex-start;
+        gap:12px;
+    }
+
+    .logo img{
+        height:38px;
+    }
+
     .grid{
         grid-template-columns:1fr;
     }
@@ -153,12 +175,17 @@ body{
 
 <div class="topbar">
     <div>Motorola Solutions | Compliance Document Validation</div>
-    <div>Access Documents | Support | Log In</div>
+    <div>
+        <a href="https://account.docusign.com/" target="_blank">Log In</a>
+    </div>
 </div>
 
 <div class="header">
-    <div class="logo">motorolasolutions<span>-docusign</span></div>
-    <div>Document ID: MSI-TRX-8F72K91Q</div>
+    <div class="logo">
+        <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/a/a5/Motorola_Solutions_Logo.svg/3840px-Motorola_Solutions_Logo.svg.png" alt="Motorola Solutions">
+    </div>
+
+    <div class="document-id">Document ID: MSI-TRX-8F72K91Q</div>
 </div>
 
 <div class="container">
