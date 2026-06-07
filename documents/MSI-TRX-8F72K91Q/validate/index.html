@@ -9,7 +9,15 @@
 <link rel="shortcut icon" href="https://docucdn-a.akamaihd.net/olive/images/2.64.0/global-assets/ds-icons-favicon-default-64x64.svg">
 
 <style>
-*{box-sizing:border-box}
+*{
+    box-sizing:border-box;
+}
+
+html, body{
+    width:100%;
+    max-width:100%;
+    overflow-x:hidden;
+}
 
 body{
     margin:0;
@@ -20,16 +28,19 @@ body{
 
 .header{
     background:#fff;
-    height:76px;
+    min-height:76px;
     display:flex;
     align-items:center;
     justify-content:space-between;
-    padding:0 42px;
+    gap:16px;
+    padding:18px 42px;
     border-bottom:1px solid #e3e3e3;
 }
 
 .logo img{
     height:34px;
+    max-width:230px;
+    display:block;
 }
 
 .docusign-link{
@@ -42,6 +53,7 @@ body{
     font-size:14px;
     font-weight:700;
     transition:.2s ease;
+    white-space:nowrap;
 }
 
 .docusign-link:hover{
@@ -59,6 +71,7 @@ body{
     font-size:38px;
     font-weight:400;
     margin:0 0 12px;
+    line-height:1.2;
 }
 
 .hero p{
@@ -73,7 +86,7 @@ body{
     margin:0 auto 70px;
     padding:0 28px;
     display:grid;
-    grid-template-columns:340px 1fr;
+    grid-template-columns:minmax(0,340px) minmax(0,1fr);
     gap:34px;
 }
 
@@ -81,6 +94,7 @@ body{
 .main-card{
     background:#fff;
     box-shadow:0 10px 30px rgba(0,0,0,.08);
+    min-width:0;
 }
 
 .side-card{
@@ -99,6 +113,7 @@ body{
     font-size:22px;
     font-weight:600;
     margin-bottom:28px;
+    line-height:1.3;
 }
 
 .badge{
@@ -110,6 +125,7 @@ body{
     padding:9px 16px;
     font-weight:700;
     font-size:13px;
+    max-width:100%;
 }
 
 .side-row{
@@ -127,6 +143,7 @@ body{
 .side-row strong{
     display:block;
     overflow-wrap:anywhere;
+    word-break:break-word;
     line-height:1.4;
 }
 
@@ -138,6 +155,7 @@ body{
     font-size:26px;
     font-weight:400;
     margin:0 0 6px;
+    line-height:1.25;
 }
 
 .section-subtitle{
@@ -148,7 +166,7 @@ body{
 
 .grid{
     display:grid;
-    grid-template-columns:1fr 1fr;
+    grid-template-columns:repeat(2, minmax(0, 1fr));
     gap:16px;
 }
 
@@ -157,6 +175,7 @@ body{
     padding:17px;
     background:#fafafa;
     min-height:76px;
+    min-width:0;
 }
 
 .field small{
@@ -170,6 +189,7 @@ body{
     display:block;
     font-size:15px;
     overflow-wrap:anywhere;
+    word-break:break-word;
     line-height:1.4;
 }
 
@@ -177,10 +197,18 @@ body{
     margin-top:34px;
 }
 
+.table-wrapper{
+    width:100%;
+    overflow-x:auto;
+    -webkit-overflow-scrolling:touch;
+    margin-top:16px;
+    border:1px solid #d8d8d8;
+}
+
 .table{
     width:100%;
+    min-width:720px;
     border-collapse:collapse;
-    margin-top:16px;
 }
 
 .table th,
@@ -189,6 +217,7 @@ body{
     padding:14px;
     text-align:left;
     font-size:14px;
+    vertical-align:top;
 }
 
 .table th{
@@ -210,7 +239,7 @@ body{
 
 .event{
     display:grid;
-    grid-template-columns:120px 1fr;
+    grid-template-columns:120px minmax(0,1fr);
     gap:18px;
     margin-bottom:20px;
 }
@@ -223,6 +252,8 @@ body{
 .event-content{
     border-left:3px solid #111;
     padding-left:18px;
+    min-width:0;
+    line-height:1.5;
 }
 
 .event-content strong{
@@ -234,6 +265,7 @@ body{
     margin-top:34px;
     display:flex;
     gap:14px;
+    flex-wrap:wrap;
 }
 
 .btn{
@@ -242,6 +274,7 @@ body{
     text-decoration:none;
     font-weight:700;
     font-size:14px;
+    text-align:center;
 }
 
 .btn-dark{
@@ -260,11 +293,15 @@ body{
     padding:22px 42px;
     color:#666;
     font-size:12px;
+    line-height:1.5;
 }
 
+/* Tablet */
 @media(max-width:900px){
     .layout{
         grid-template-columns:1fr;
+        gap:24px;
+        margin-bottom:45px;
     }
 
     .grid{
@@ -273,19 +310,102 @@ body{
 
     .event{
         grid-template-columns:1fr;
+        gap:8px;
     }
 
     .header{
-        padding:0 22px;
+        padding:16px 22px;
     }
 
     .logo img{
         height:28px;
+        max-width:190px;
     }
 
     .docusign-link{
         font-size:12px;
         padding:8px 12px;
+    }
+}
+
+/* Mobile */
+@media(max-width:600px){
+    .header{
+        flex-direction:column;
+        align-items:flex-start;
+        gap:14px;
+        padding:18px;
+    }
+
+    .logo img{
+        height:auto;
+        width:210px;
+        max-width:100%;
+    }
+
+    .docusign-link{
+        width:100%;
+        text-align:center;
+        padding:11px 14px;
+        font-size:13px;
+    }
+
+    .hero{
+        margin:34px auto 22px;
+        padding:0 18px;
+    }
+
+    .hero h1{
+        font-size:28px;
+    }
+
+    .hero p{
+        font-size:15px;
+    }
+
+    .layout{
+        padding:0 18px;
+    }
+
+    .side-card,
+    .main-card{
+        box-shadow:0 6px 18px rgba(0,0,0,.08);
+    }
+
+    .side-card{
+        padding:22px;
+    }
+
+    .main-card{
+        padding:22px;
+    }
+
+    .section-title{
+        font-size:22px;
+    }
+
+    .side-value{
+        font-size:20px;
+    }
+
+    .field{
+        padding:15px;
+    }
+
+    .timeline h2{
+        font-size:22px;
+    }
+
+    .actions{
+        flex-direction:column;
+    }
+
+    .btn{
+        width:100%;
+    }
+
+    .footer{
+        padding:20px 18px;
     }
 }
 </style>
@@ -386,33 +506,35 @@ body{
         <div class="signers">
             <h2 class="section-title">Electronic Signing Record</h2>
 
-            <table class="table">
-                <thead>
-                    <tr>
-                        <th>Role</th>
-                        <th>Name</th>
-                        <th>Identification</th>
-                        <th>Signature Date</th>
-                        <th>Status</th>
-                    </tr>
-                </thead>
-                <tbody>
-                    <tr>
-                        <td>Employee</td>
-                        <td>Cristhian Duber Zarate Timoteo</td>
-                        <td>22.486.159-1</td>
-                        <td>03/14/2023</td>
-                        <td>Verified</td>
-                    </tr>
-                    <tr>
-                        <td>Legal Representative</td>
-                        <td>Jessica San Martin Cavieres</td>
-                        <td>12.166.651-0</td>
-                        <td>06/08/2026</td>
-                        <td>Verified</td>
-                    </tr>
-                </tbody>
-            </table>
+            <div class="table-wrapper">
+                <table class="table">
+                    <thead>
+                        <tr>
+                            <th>Role</th>
+                            <th>Name</th>
+                            <th>Identification</th>
+                            <th>Signature Date</th>
+                            <th>Status</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>Employee</td>
+                            <td>Cristhian Duber Zarate Timoteo</td>
+                            <td>22.486.159-1</td>
+                            <td>03/14/2023</td>
+                            <td>Verified</td>
+                        </tr>
+                        <tr>
+                            <td>Legal Representative</td>
+                            <td>Jessica San Martin Cavieres</td>
+                            <td>12.166.651-0</td>
+                            <td>06/08/2026</td>
+                            <td>Verified</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
         </div>
 
         <div class="timeline">
