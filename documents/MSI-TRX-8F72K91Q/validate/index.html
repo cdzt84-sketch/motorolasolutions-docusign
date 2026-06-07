@@ -337,6 +337,11 @@ body{
             <small>Validation Date</small>
             <strong>June 08, 2026</strong>
         </div>
+
+        <div class="side-row">
+            <small>Verification Access Timestamp</small>
+            <strong id="consultationDate">Loading...</strong>
+        </div>
     </aside>
 
     <section class="main-card">
@@ -458,6 +463,27 @@ body{
 <footer class="footer">
     Academic demonstration environment. This site is not an official Motorola Solutions or DocuSign portal.
 </footer>
+
+<script>
+function updateConsultationDate(){
+    const now = new Date();
+
+    const options = {
+        year: 'numeric',
+        month: 'long',
+        day: '2-digit',
+        hour: '2-digit',
+        minute: '2-digit',
+        second: '2-digit',
+        hour12: true
+    };
+
+    document.getElementById("consultationDate").textContent =
+        now.toLocaleString("en-US", options);
+}
+
+updateConsultationDate();
+</script>
 
 </body>
 </html>
