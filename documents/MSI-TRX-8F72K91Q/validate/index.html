@@ -9,15 +9,9 @@
 <link rel="shortcut icon" href="https://docucdn-a.akamaihd.net/olive/images/2.64.0/global-assets/ds-icons-favicon-default-64x64.svg">
 
 <style>
-*{
-    box-sizing:border-box;
-}
+*{box-sizing:border-box}
 
-html, body{
-    width:100%;
-    max-width:100%;
-    overflow-x:hidden;
-}
+html, body{width:100%;max-width:100%;overflow-x:hidden}
 
 body{
     margin:0;
@@ -37,11 +31,7 @@ body{
     border-bottom:1px solid #e3e3e3;
 }
 
-.logo img{
-    height:34px;
-    max-width:230px;
-    display:block;
-}
+.logo img{height:34px;max-width:230px;display:block}
 
 .docusign-link{
     color:#4b00ff;
@@ -52,14 +42,10 @@ body{
     text-decoration:none;
     font-size:14px;
     font-weight:700;
-    transition:.2s ease;
     white-space:nowrap;
 }
 
-.docusign-link:hover{
-    background:#4b00ff;
-    color:#fff;
-}
+.docusign-link:hover{background:#4b00ff;color:#fff}
 
 .hero{
     max-width:1180px;
@@ -90,16 +76,14 @@ body{
     gap:34px;
 }
 
-.side-card,
-.main-card{
+.side-card,.main-card{
     background:#fff;
     box-shadow:0 10px 30px rgba(0,0,0,.08);
     min-width:0;
 }
 
-.side-card{
-    padding:30px;
-}
+.side-card{padding:30px}
+.main-card{padding:38px}
 
 .side-title{
     font-size:13px;
@@ -125,7 +109,6 @@ body{
     padding:9px 16px;
     font-weight:700;
     font-size:13px;
-    max-width:100%;
 }
 
 .side-row{
@@ -134,21 +117,19 @@ body{
     margin-top:18px;
 }
 
-.side-row small{
+.side-row small,.field small{
     display:block;
     color:#777;
-    margin-bottom:6px;
+    margin-bottom:8px;
+    font-size:12px;
 }
 
-.side-row strong{
+.side-row strong,.field strong{
     display:block;
     overflow-wrap:anywhere;
     word-break:break-word;
     line-height:1.4;
-}
-
-.main-card{
-    padding:38px;
+    font-size:15px;
 }
 
 .section-title{
@@ -178,24 +159,7 @@ body{
     min-width:0;
 }
 
-.field small{
-    display:block;
-    color:#777;
-    font-size:12px;
-    margin-bottom:8px;
-}
-
-.field strong{
-    display:block;
-    font-size:15px;
-    overflow-wrap:anywhere;
-    word-break:break-word;
-    line-height:1.4;
-}
-
-.signers{
-    margin-top:34px;
-}
+.signers{margin-top:34px}
 
 .table-wrapper{
     width:100%;
@@ -211,8 +175,7 @@ body{
     border-collapse:collapse;
 }
 
-.table th,
-.table td{
+.table th,.table td{
     border:1px solid #d8d8d8;
     padding:14px;
     text-align:left;
@@ -220,10 +183,7 @@ body{
     vertical-align:top;
 }
 
-.table th{
-    background:#f1f1f1;
-    font-weight:700;
-}
+.table th{background:#f1f1f1;font-weight:700}
 
 .timeline{
     margin-top:38px;
@@ -277,15 +237,8 @@ body{
     text-align:center;
 }
 
-.btn-dark{
-    background:#111;
-    color:#fff;
-}
-
-.btn-light{
-    border:1px solid #111;
-    color:#111;
-}
+.btn-dark{background:#111;color:#fff}
+.btn-light{border:1px solid #111;color:#111}
 
 .footer{
     background:#fff;
@@ -296,117 +249,39 @@ body{
     line-height:1.5;
 }
 
-/* Tablet */
 @media(max-width:900px){
-    .layout{
-        grid-template-columns:1fr;
-        gap:24px;
-        margin-bottom:45px;
-    }
-
-    .grid{
-        grid-template-columns:1fr;
-    }
-
-    .event{
-        grid-template-columns:1fr;
-        gap:8px;
-    }
-
-    .header{
-        padding:16px 22px;
-    }
-
-    .logo img{
-        height:28px;
-        max-width:190px;
-    }
-
-    .docusign-link{
-        font-size:12px;
-        padding:8px 12px;
-    }
+    .layout{grid-template-columns:1fr;gap:24px;margin-bottom:45px}
+    .grid{grid-template-columns:1fr}
+    .event{grid-template-columns:1fr;gap:8px}
+    .header{padding:16px 22px}
+    .logo img{height:28px;max-width:190px}
+    .docusign-link{font-size:12px;padding:8px 12px}
 }
 
-/* Mobile */
 @media(max-width:600px){
-    .header{
-        flex-direction:column;
-        align-items:flex-start;
-        gap:14px;
-        padding:18px;
-    }
+    .header{flex-direction:column;align-items:flex-start;gap:14px;padding:18px}
+    .logo img{height:auto;width:210px;max-width:100%}
+    .docusign-link{width:100%;text-align:center;padding:11px 14px;font-size:13px}
+    .hero{margin:34px auto 22px;padding:0 18px}
+    .hero h1{font-size:28px}
+    .hero p{font-size:15px}
+    .layout{padding:0 18px}
+    .side-card,.main-card{box-shadow:0 6px 18px rgba(0,0,0,.08)}
+    .side-card,.main-card{padding:22px}
+    .section-title{font-size:22px}
+    .side-value{font-size:20px}
+    .field{padding:15px}
+    .timeline h2{font-size:22px}
+    .actions{flex-direction:column}
+    .btn{width:100%}
+    .footer{padding:20px 18px}
+}
 
-    .logo img{
-        height:auto;
-        width:210px;
-        max-width:100%;
-    }
-
-    .docusign-link{
-        width:100%;
-        text-align:center;
-        padding:11px 14px;
-        font-size:13px;
-    }
-
-    .hero{
-        margin:34px auto 22px;
-        padding:0 18px;
-    }
-
-    .hero h1{
-        font-size:28px;
-    }
-
-    .hero p{
-        font-size:15px;
-    }
-
-    .layout{
-        padding:0 18px;
-    }
-
-    .side-card,
-    .main-card{
-        box-shadow:0 6px 18px rgba(0,0,0,.08);
-    }
-
-    .side-card{
-        padding:22px;
-    }
-
-    .main-card{
-        padding:22px;
-    }
-
-    .section-title{
-        font-size:22px;
-    }
-
-    .side-value{
-        font-size:20px;
-    }
-
-    .field{
-        padding:15px;
-    }
-
-    .timeline h2{
-        font-size:22px;
-    }
-
-    .actions{
-        flex-direction:column;
-    }
-
-    .btn{
-        width:100%;
-    }
-
-    .footer{
-        padding:20px 18px;
-    }
+@media print{
+    .header,.actions,.footer{display:none!important}
+    body{background:white}
+    .layout{max-width:100%;display:block;margin:0;padding:0}
+    .side-card,.main-card{box-shadow:none;border:1px solid #ddd;margin-bottom:18px}
 }
 </style>
 </head>
@@ -438,74 +313,30 @@ body{
         <div class="side-value">Active and Verified</div>
         <div class="badge">VERIFIED DOCUMENT</div>
 
-        <div class="side-row">
-            <small>Case File</small>
-            <strong>EXP-MOT-2026-000184</strong>
-        </div>
-
-        <div class="side-row">
-            <small>Document Number</small>
-            <strong>DC-MOT-2026-000184</strong>
-        </div>
-
-        <div class="side-row">
-            <small>Envelope ID</small>
-            <strong>6AD244FB-33E4-4CF4-94AB-3DCD9EF351B8</strong>
-        </div>
-
-        <div class="side-row">
-            <small>Validation Date</small>
-            <strong>June 08, 2026</strong>
-        </div>
-
-        <div class="side-row">
-            <small>Verification Access Timestamp</small>
-            <strong id="consultationDate">Loading...</strong>
-        </div>
+        <div class="side-row"><small>Case File</small><strong>EXP-MOT-2026-000184</strong></div>
+        <div class="side-row"><small>Document Number</small><strong>DC-MOT-2026-000184</strong></div>
+        <div class="side-row"><small>Envelope ID</small><strong>6AD244FB-33E4-4CF4-94AB-3DCD9EF351B8</strong></div>
+        <div class="side-row"><small>Validation Date</small><strong>June 08, 2026</strong></div>
+        <div class="side-row"><small>Verification Access Timestamp</small><strong id="consultationDate">Loading...</strong></div>
     </aside>
 
     <section class="main-card">
-
         <h2 class="section-title">Document Validation Center</h2>
         <div class="section-subtitle">
             The document has been located and its signing record is available for review.
         </div>
 
         <div class="grid">
-            <div class="field">
-                <small>Company</small>
-                <strong>Motorola Solutions Chile S.A.</strong>
-            </div>
-
-            <div class="field">
-                <small>Company Tax ID</small>
-                <strong>96.682.430-1</strong>
-            </div>
-
-            <div class="field">
-                <small>Document Type</small>
-                <strong>Employment Contract</strong>
-            </div>
-
-            <div class="field">
-                <small>Base Contract Date</small>
-                <strong>March 14, 2023</strong>
-            </div>
-
-            <div class="field">
-                <small>Management and Validation Platform</small>
-                <strong>DocuSign</strong>
-            </div>
-
-            <div class="field">
-                <small>Integrity Check</small>
-                <strong>Document integrity verified</strong>
-            </div>
+            <div class="field"><small>Company</small><strong>Motorola Solutions Chile S.A.</strong></div>
+            <div class="field"><small>Company Tax ID</small><strong>96.682.430-1</strong></div>
+            <div class="field"><small>Document Type</small><strong>Employment Contract</strong></div>
+            <div class="field"><small>Base Contract Date</small><strong>March 14, 2023</strong></div>
+            <div class="field"><small>Management and Validation Platform</small><strong>DocuSign</strong></div>
+            <div class="field"><small>Integrity Check</small><strong>Document integrity verified</strong></div>
         </div>
 
         <div class="signers">
             <h2 class="section-title">Electronic Signing Record</h2>
-
             <div class="table-wrapper">
                 <table class="table">
                     <thead>
@@ -574,10 +405,17 @@ body{
         </div>
 
         <div class="actions">
-            <a href="#" class="btn btn-dark">Download certificate</a>
-            <a href="#" class="btn btn-light" onclick="window.print()">Print validation</a>
-        </div>
+            <a
+                href="files/MotorolaSolutions_Verified_Employment_Contract_DC-MOT-2026-000184.pdf.pdf"
+                class="btn btn-dark"
+                download="MotorolaSolutions_Verified_Employment_Contract_DC-MOT-2026-000184.pdf">
+                Download Verified Employment Contract
+            </a>
 
+            <a href="javascript:window.print();" class="btn btn-light">
+                Print Validation Record
+            </a>
+        </div>
     </section>
 
 </main>
@@ -589,15 +427,14 @@ body{
 <script>
 function updateConsultationDate(){
     const now = new Date();
-
     const options = {
-        year: 'numeric',
-        month: 'long',
-        day: '2-digit',
-        hour: '2-digit',
-        minute: '2-digit',
-        second: '2-digit',
-        hour12: true
+        year:'numeric',
+        month:'long',
+        day:'2-digit',
+        hour:'2-digit',
+        minute:'2-digit',
+        second:'2-digit',
+        hour12:true
     };
 
     document.getElementById("consultationDate").textContent =
